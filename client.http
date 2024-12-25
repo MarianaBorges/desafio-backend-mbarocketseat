@@ -1,0 +1,6 @@
+@baseUrl = http://localhost:3000
+
+# @name get_categories
+GET {{baseUrl}}/categories
+Content-Type: application/json
+
