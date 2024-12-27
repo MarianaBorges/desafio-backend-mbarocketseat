@@ -36,6 +36,7 @@ model User {
   
   avatar   Image[]
   views    View[]
+  product Product[]
 
   @@map("users")
 }
@@ -52,6 +53,7 @@ model Product {
   updatedAt    DateTime? @updatedAt @map("updated_at")
 
   category Category @relation(fields: [categoryId], references: [id])
+  user User @relation(fields: [userId], references: [id])
 
   images Image[]
   views View[]

@@ -16,14 +16,10 @@ export class CategoriesUseCase {
   constructor(private categoryRepository: CategoryRepository) {}
 
   async execute(): Promise<CategoriesUseCaseResponse> {
-    try {
-      const categories = await this.categoryRepository.getAll();
-      console.log(categories);
-      return right({
-        categories,
-      });
-    } catch (error) {
-      console.log('error aqui', error);
-    }
+    const categories = await this.categoryRepository.getAll();
+
+    return right({
+      categories,
+    });
   }
 }

@@ -4,8 +4,8 @@ import { UniqueEntityID } from './value-objects/unique-entity-id';
 interface ImageProps {
   title: string;
   url: string;
-  createdAt: string;
-  updatedAt: string;
+  createdAt: Date;
+  updatedAt?: Date | null;
 }
 
 export class Image extends Entity<ImageProps> {

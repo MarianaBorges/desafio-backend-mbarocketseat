@@ -4,3 +4,8 @@
 GET {{baseUrl}}/categories
 Content-Type: application/json
 
+###
+
+# @name get_products
+GET {{baseUrl}}/products/37826761-8086-4521-8fa3-c12f58c9d2b4
+Content-Type: application/json

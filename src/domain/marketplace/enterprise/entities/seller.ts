@@ -4,6 +4,7 @@ import { UniqueEntityID } from './value-objects/unique-entity-id';
 interface SellerProps {
   name: string;
   email: string;
+  phone: string;
   password: string;
 }
 
@@ -18,6 +19,26 @@ export class Seller extends Entity<SellerProps> {
 
   get password() {
     return this.props.password;
+  }
+
+  get phone() {
+    return this.props.phone;
+  }
+
+  set name(name: string) {
+    this.name = name;
+  }
+
+  set email(email: string) {
+    this.email = email;
+  }
+
+  set password(password: string) {
+    this.password = password;
+  }
+
+  set phone(phone: string) {
+    this.phone = phone;
   }
 
   static create(props: SellerProps, id?: UniqueEntityID) {
